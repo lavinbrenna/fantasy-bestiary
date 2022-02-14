@@ -1,0 +1,29 @@
+api call to append to table of contents - api/monsters
+these will need an attach listeners method so they go to the proper api call
+A-E
+for each monster in monsters, counter start at 0, i < last e, i ++
+append monster.name
+F-I
+for each monster in monsters counter start at index of first f, i < last i , i++
+append monster.name
+J-N
+for each monster in monsters counter start index of first j, i < last n, i ++
+append monster.name
+O-Z
+for each monster in monsters counter start at index of first o, i < last z, i ++
+append monster.name
+
+for pages
+What stats are we going to display?
+monster.name
+monster.size
+monster.type
+monster.alignment
+monster.xp
+monster.languages
+monster.strength
+monster.dexterity
+monster.constitution
+monster.intelligence
+monster.wisdom
+monster.charisma

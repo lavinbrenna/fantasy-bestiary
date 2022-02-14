@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 
-
 /*
 table of contents
 A-E

@@ -9,6 +9,6 @@ export default class MonsterService {
       })
       .catch(function(error) {
         return error;
-      })
+      });
   }
 }
