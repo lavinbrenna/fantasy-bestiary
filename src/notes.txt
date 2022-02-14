@@ -27,3 +27,9 @@ monster.constitution
 monster.intelligence
 monster.wisdom
 monster.charisma
+
+Co-Authored-By: Jack Jones <jacktjones4@gmail.com>
+Co-Authored-by: William Jameson <williamjameson90@gmail.com>
+Co-Authored-by: Jessica Baker <jessb.epicodus@gmail.com>
+Co-Authored-by: S-Espinet <s.lou.espinet@gmail.com>
+Co-Authored-by: Brenna Lavin <lavinbrenna@gmail.com>
