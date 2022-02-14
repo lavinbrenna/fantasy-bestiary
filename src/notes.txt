@@ -1,17 +1,13 @@
 api call to append to table of contents - api/monsters
 these will need an attach listeners method so they go to the proper api call
 A-E
-for each monster in monsters, counter start at 0, i < last e, i ++
-append monster.name
+make clickable
 F-I
-for each monster in monsters counter start at index of first f, i < last i , i++
-append monster.name
+make clickable
 J-N
-for each monster in monsters counter start index of first j, i < last n, i ++
-append monster.name
+make clickable
 O-Z
-for each monster in monsters counter start at index of first o, i < last z, i ++
-append monster.name
+make clickable
 
 for pages
 What stats are we going to display?
@@ -33,3 +29,4 @@ Co-Authored-by: William Jameson <williamjameson90@gmail.com>
 Co-Authored-by: Jessica Baker <jessb.epicodus@gmail.com>
 Co-Authored-by: S-Espinet <s.lou.espinet@gmail.com>
 Co-Authored-by: Brenna Lavin <lavinbrenna@gmail.com>
+

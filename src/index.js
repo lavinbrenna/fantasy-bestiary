@@ -22,45 +22,56 @@ O-Z
 */
 
 
-function displayAThruE(arr) {
+function displayAThruZ(arr) {
   for (let i = 0; i <= 99; i++) {
-    $("#flipbook").append(`<div id="page">${arr.results[i].name}</div>`);
+    $("#aThruE").append(`<div id="page">${arr.results[i].name}</div>`);
   }
-}
-function displayFThruI(arr){
   for (let i = 100; i <= 175; i++) {
-    $("#flipbook").append(`<div id="page">${arr.results[i].name}</div>`);
+    $("#fThruI").append(`<div id="page">${arr.results[i].name}</div>`);
   }
-}
-function displayJThruM(arr){
   for(let i = 176; i <= 202; i++) {
-    $("#flipbook").append(`<div id="page">${arr.results[i].name}</div>`);
+    $("#jThruM").append(`<div id="page">${arr.results[i].name}</div>`);
   }
-}
-function displayNThruU(arr){
   for(let i = 203; i <= 286; i++){
-    $("#flipbook").append(`<div id="page">${arr.results[i].name}</div>`);
+    $("#nThruU").append(`<div id="page">${arr.results[i].name}</div>`);
   }
-}
-function displayVThruZ(arr){
   for(let i = 287; i <= 331; i++){
-    $("#flipbook").append(`<div id="page">${arr.results[i].name}</div>`);
+    $("#vThruZ").append(`<div id="page">${arr.results[i].name}</div>`);
   }
 }
+
+function attachListeners(){
+  $('.aThruE').on('click', function(){
+    $("#aThruE").toggle();
+    $("#fThruI, #jThruM, #nThruU, #vThruZ").hide();
+  });
+  $('.fThruI').on('click', function(){
+    $("#fThruI").toggle();
+    $("#aThruE, #jThruM, #nThruU, #vThruZ").hide();
+  });
+  $('.jThruM').on('click', function(){
+    $('#jThruM').toggle();
+    $("#fThruI, #aThruE, #nThruU, #vThruZ").hide();
+  });
+  $('.nThruU').on('click', function(){
+    $('#nThruU').toggle();
+    $("#fThruI, #jThruM, #aThruE, #vThruZ").hide();
+  });
+  $('.vThruZ').on('click', function(){
+    $('#vThruZ').toggle();
+    $("#fThruI, #jThruM, #nThruU, #aThruE").hide();
+  });
+}
+
 $(document).ready(function () {
+  attachListeners();
+  $("#fThruI, #jThruM, #nThruU, #aThruE, #vThruZ").hide();
   MonsterList.getMonsterList().then(function (monsterListResponse) {
     console.log(monsterListResponse);
     if (monsterListResponse instanceof Error) {
       throw Error("Sorry there was an error");
     }
     const monsterList = monsterListResponse;
-    console.log(monsterList);
-    console.log(monsterList.results[0].name);
-    displayAThruE(monsterList);
-    displayFThruI(monsterList);
-    displayJThruM(monsterList);
-    displayNThruU(monsterList);
-    displayVThruZ(monsterList);
-    
+    displayAThruZ(monsterList);
   });
 });
