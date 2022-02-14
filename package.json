@@ -10,7 +10,7 @@
     "test": "jest --coverage"
   },
   "keywords": [],
-  "author": "Brenna Lavin",
+  "author": "Brenna Lavin, Jack Jones, Jessi Baker, Sarah Espinet, William Jameson",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
