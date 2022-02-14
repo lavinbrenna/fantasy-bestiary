@@ -1,6 +1,6 @@
 # _Fantasy Bestiary_
 
-#### By _**Brenna Lavin, Jack Jones, Jessi Baker, Sarah Espinet, William Jameson**_
+#### By _**Brenna Lavin, Jack Jones, Jessica Baker, Sarah Espinet, William Jameson**_
 
 #### _{Brief description of application}_
 
