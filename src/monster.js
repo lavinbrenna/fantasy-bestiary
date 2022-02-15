@@ -1,6 +1,6 @@
 export default class MonsterService {  
-  static getMonster(name) {
-    return fetch(`https://www.dnd5eapi.co/api/monsters/${name}`)
+  static getMonster(index) {
+    return fetch(`https://www.dnd5eapi.co/api/monsters/${index}`)
       .then(function(response) {
         if (!response.ok) {
           throw Error(response.statusText);
