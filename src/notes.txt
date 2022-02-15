@@ -1,13 +1,15 @@
 api call to append to table of contents - api/monsters
 these will need an attach listeners method so they go to the proper api call
-A-E
-make clickable
-F-I
-make clickable
-J-N
-make clickable
-O-Z
-make clickable
+
+append to it's section in the for loop
+let monsterName = arr.results[i].name;
+
+
+create a variable that takes the id.text so that it can have the monster service api function
+so that on click, only targets that specific id, instead of the entire class.
+
+
+
 
 for pages
 What stats are we going to display?
