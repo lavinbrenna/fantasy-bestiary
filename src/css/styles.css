@@ -1,6 +1,3 @@
-html{
-  cursor: url('./../assets/images/creepy_hand.png'), none;
-}
 
 body {
   background-image: url('./../assets/images/dungeon_wall.jpg');
@@ -10,16 +7,21 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 18pt;
+  cursor: url('./../assets/images/creepy_hand.png'), none;
 }
+
 h1, h4{
   font-family: 'ode';
 }
+
 h1{
   font-size: 30pt;
 }
+
 h4{
   font-size: 26pt;
 }
+
 #aThruE, #fThruI, #jThruM, #nThruU, #vThruZ{
 overflow-y:auto;
 height: 500px;
@@ -33,7 +35,7 @@ height: 500px;
   margin-top: 30px;
 }
 
-.pageContainer, #monsterOutput{
+.pageContainer, #monsterOutput, #randomMonsterOutput{
   background-image: url('./../assets/images/paper.png');
   background-size: cover;
   overflow-y: auto;
@@ -45,9 +47,29 @@ height: 500px;
   text-align: center;
   padding: 10px;
 }
+
 #monsterOutput img{
   margin: auto;
   display: block;
   max-height: 600px;
   padding-top: 70px;
+}
+
+#randomMonsterMap img{
+  margin: auto;
+  display: block;
+  padding-top: 30px;
+}
+#randomMonsterOutput{
+  cursor: url('./../assets/images/sword_cursor.png'), default;
+}
+#randomMonsterInfo img {
+  max-width: 30%;
+}
+#randomMonsterInfo{
+  padding-top: 30px;
+}
+
+.monster1:hover,.monster2:hover, .monster3:hover, .monster4:hover, .monster5:hover, .monster6:hover, .monster7:hover, .monster8:hover, .monster9:hover, .monster10:hover{
+  cursor: url('./../assets/images/creepy_hand.png'), none;
 }
