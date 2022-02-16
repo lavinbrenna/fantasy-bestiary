@@ -35,8 +35,7 @@ module.exports = {
         loader: "eslint-loader"
       },
       {
-        test: /\.(gif|png|jpe?g)$/i,
-        type: 'asset/resource',
+        test: /\.(gif|png|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',

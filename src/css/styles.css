@@ -1,3 +1,7 @@
+html{
+  cursor: url('./../assets/images/creepy_hand.png'), none;
+}
+
 #aThruE, #fThruI, #jThruM, #nThruU, #vThruZ{
 overflow-y:auto;
 height: 500px;

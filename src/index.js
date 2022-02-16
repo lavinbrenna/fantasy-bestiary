@@ -1,10 +1,10 @@
 import $ from "jquery";
-import "turn.js";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import MonsterService from './monster.js';
 import MonsterList from "./monster-list.js";
+import Images from "./image.js";
 
 function displayAThruZ(arr) {
   for (let i = 0; i <= 99; i++) {
@@ -24,22 +24,19 @@ function displayAThruZ(arr) {
   }
 }
 
-function displayMonsterInfo(title, size, type, alignment, xp, languages, strength, dexterity, constitution, intelligence, wisdom, charisma) {
+function displayMonsterInfo(index, title, size, type, alignment, xp, languages, strength, dexterity, constitution, intelligence, wisdom, charisma) {
   $('#monsterOutput').show();
-  $("#flipbook").hide();
-  $("#monsterOutput").html(`<h4>Name: ${title}</h4> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p> <p>XP: ${xp}</p> <p>Languages: ${languages}</p> <p>Strength: ${strength}</p> <p>Dexterity: ${dexterity}</p> <p>Constitution: ${constitution}</p> <p>Intelligence: ${intelligence}</p> <p>Wisdom: ${wisdom}</p> <p>Charisma: ${charisma}</p>
+  $("#book").hide();
+  let monsterImage = new Images(index);
+  $("#monsterOutput").html(`<h4>Name: ${title}</h4> <img src="${monsterImage.imagePath}"> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p> <p>XP: ${xp}</p> <p>Languages: ${languages}</p> <p>Strength: ${strength}</p> <p>Dexterity: ${dexterity}</p> <p>Constitution: ${constitution}</p> <p>Intelligence: ${intelligence}</p> <p>Wisdom: ${wisdom}</p> <p>Charisma: ${charisma}</p>
   <button type="button" id="back">Back</button>
   `);
   $("#back").on('click', function(){
-    $("#flipbook").show();
+    $("#book").show();
     $("#monsterOutput").hide();
     $("#fThruI, #jThruM, #nThruU, #aThruE, #vThruZ").hide();
   });
 }
-
-// function clearOutput() {
-//   $("#monsterOutput").text("");
-// }
 
 function attachListeners() {
   $('h2.aThruE').on('click', function () {
@@ -81,7 +78,7 @@ $(document).ready(function () {
         if (monsterResponse instanceof Error) {
           throw Error("Sorry there was an error");
         }
-        // let monsterImage = monsterResponse.index;
+        let monsterIndex = monsterResponse.index;
         let monsterTitle = monsterResponse.name;
         let monsterSize = monsterResponse.size;
         let monsterType = monsterResponse.type;
@@ -94,21 +91,7 @@ $(document).ready(function () {
         let monsterIntelligence = monsterResponse.intelligence;
         let monsterWisdom = monsterResponse.wisdom;
         let monsterCharisma = monsterResponse.charisma;
-        displayMonsterInfo(monsterTitle, monsterSize, monsterType, monsterAlignment, monsterXP, monsterLanguages, monsterStrength, monsterDexterity, monsterConstitution, monsterIntelligence, monsterWisdom, monsterCharisma);
+        displayMonsterInfo(monsterIndex,monsterTitle, monsterSize, monsterType, monsterAlignment, monsterXP, monsterLanguages, monsterStrength, monsterDexterity, monsterConstitution, monsterIntelligence, monsterWisdom, monsterCharisma);
       });
-    // clearOutput();
   });
 });
-
-
-
-
-// function importAll(r) {
-//   let images = {};
-//   r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-//   return images;
-// }
-
-// const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
-
-// <img src={images['doggy.png']} />
