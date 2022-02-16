@@ -2,7 +2,52 @@ html{
   cursor: url('./../assets/images/creepy_hand.png'), none;
 }
 
+body {
+  background-image: url('./../assets/images/dungeon_wall.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'ode';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18pt;
+}
+h1, h4{
+  font-family: 'ode';
+}
+h1{
+  font-size: 30pt;
+}
+h4{
+  font-size: 26pt;
+}
 #aThruE, #fThruI, #jThruM, #nThruU, #vThruZ{
 overflow-y:auto;
 height: 500px;
+}
+
+.cover img{
+  height: 700px;
+  margin:auto;
+  max-width: 50%;
+  display: block;
+  margin-top: 30px;
+}
+
+.pageContainer, #monsterOutput{
+  background-image: url('./../assets/images/paper.png');
+  background-size: cover;
+  overflow-y: auto;
+  height: 700px;
+  margin:auto;
+  max-width: 85%;
+  margin-top: 30px;
+  display: none;
+  text-align: center;
+  padding: 10px;
+}
+#monsterOutput img{
+  margin: auto;
+  display: block;
+  max-height: 600px;
+  padding-top: 70px;
 }

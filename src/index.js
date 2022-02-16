@@ -28,8 +28,8 @@ function displayMonsterInfo(index, title, size, type, alignment, xp, languages, 
   $('#monsterOutput').show();
   $("#book").hide();
   let monsterImage = new Images(index);
-  $("#monsterOutput").html(`<h4>Name: ${title}</h4> <img src="${monsterImage.imagePath}"> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p> <p>XP: ${xp}</p> <p>Languages: ${languages}</p> <p>Strength: ${strength}</p> <p>Dexterity: ${dexterity}</p> <p>Constitution: ${constitution}</p> <p>Intelligence: ${intelligence}</p> <p>Wisdom: ${wisdom}</p> <p>Charisma: ${charisma}</p>
-  <button type="button" id="back">Back</button>
+  $("#monsterOutput").html(`<div class="row"><div class="col-md"><h4>Name: ${title}</h4> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p> <p>XP: ${xp}</p> <p>Languages: ${languages}</p> <p>Strength: ${strength}</p> <p>Dexterity: ${dexterity}</p> <p>Constitution: ${constitution}</p> <p>Intelligence: ${intelligence}</p> <p>Wisdom: ${wisdom}</p> <p>Charisma: ${charisma}</p>
+  <button type="button" id="back">Back</button></div> <div class="col-md"><img src="${monsterImage.imagePath}"></div></div>
   `);
   $("#back").on('click', function(){
     $("#book").show();
@@ -59,10 +59,19 @@ function attachListeners() {
     $('#vThruZ').toggle();
     $("#fThruI, #jThruM, #nThruU, #aThruE").hide();
   });
+  $(".cover").on('click', function(){
+    $(".cover").hide();
+    $(".pageContainer,.tableOfContents,.fThruI, .jThruM, .nThruU, .aThruE, .vThruZ").show();
+  });
+  $("#closeBook").on('click',function(){
+    console.log('Click');
+    $(".cover").show();
+    $(".pageContainer,.tableOfContents,.fThruI, .jThruM, .nThruU, .aThruE, .vThruZ").hide();
+  });
 }
 
 $(document).ready(function () {
-  $("#fThruI, #jThruM, #nThruU, #aThruE, #vThruZ").hide();
+  $("#page,#fThruI, #jThruM, #nThruU, #aThruE, #vThruZ").hide();
   MonsterList.getMonsterList().then(function (monsterListResponse) {
     if (monsterListResponse instanceof Error) {
       throw Error("Sorry there was an error");
