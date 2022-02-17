@@ -28,7 +28,7 @@ function displayMonsterInfo(index, title, size, type, alignment, xp, languages, 
   $('#monsterOutput').show();
   $("#book").hide();
   let monsterImage = new Images(index);
-  $("#monsterOutput").html(`<div class="row"><div class="col-md"><h4>Name: ${title}</h4> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p> <p>XP: ${xp}</p> <p>Languages: ${languages}</p> <p>Strength: ${strength}</p> <p>Dexterity: ${dexterity}</p> <p>Constitution: ${constitution}</p> <p>Intelligence: ${intelligence}</p> <p>Wisdom: ${wisdom}</p> <p>Charisma: ${charisma}</p>
+  $("#monsterOutput").html(`<div class="row"><div class="col-md"><h4>${title}</h4> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p> <p>XP: ${xp}</p> <p>Languages: ${languages}</p> <p>Strength: ${strength}</p> <p>Dexterity: ${dexterity}</p> <p>Constitution: ${constitution}</p> <p>Intelligence: ${intelligence}</p> <p>Wisdom: ${wisdom}</p> <p>Charisma: ${charisma}</p>
   </div> <div class="col-md"><img src="${monsterImage.imagePath}">
   <button type="button" id="back">Back</button></div></div>
   `);
@@ -42,7 +42,7 @@ function displayMonsterInfo(index, title, size, type, alignment, xp, languages, 
 function displayRandomMonsterInfo(index, title, size, type, alignment, xp){
   $("#randomMonsterOutput").show();
   let monsterImage = new Images(index);
-  $('#randomMonsterInfo').html(`<h4>Name: ${title}</h4> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p><p>XP: ${xp}</p> <img src="${monsterImage.imagePath}">`);
+  $('#randomMonsterInfo').html(`<h4>${title}</h4> <p>Size: ${size}</p> <p>Type: ${type}</p> <p>Alignment: ${alignment}</p><p>XP: ${xp}</p> <img src="${monsterImage.imagePath}">`);
 }
 
 function attachListeners() {

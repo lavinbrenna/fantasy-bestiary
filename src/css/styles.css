@@ -73,3 +73,7 @@ height: 500px;
 .monster1:hover,.monster2:hover, .monster3:hover, .monster4:hover, .monster5:hover, .monster6:hover, .monster7:hover, .monster8:hover, .monster9:hover, .monster10:hover{
   cursor: url('./../assets/images/creepy_hand.png'), none;
 }
+button{
+  margin: 20px;
+  background-color: rgb(217,203,166);
+}
