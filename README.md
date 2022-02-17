@@ -1,8 +1,8 @@
-# _Fantasy Bestiary_
+# _Monstronomicon_
 
 #### By _**Brenna Lavin, Jack Jones, Jessica Baker, Sarah Espinet, William Jameson**_
 
-#### _{Brief description of application}_
+#### _A DnD-based bestiary. Includes monsters and their stats._
 
 ## Technologies Used
 
@@ -19,27 +19,32 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This application is based on DnD monsters. It has a collection of DnD monsters taken from DnD's website (which does not require an API key). We've include each monster's stats, and have an interactive map that uses a cursor change to denote clickable areas, which, when clicked, show a monster and its abbreviated stats._
 
 ## Setup/Installation Requirements
 
-* Clone git repository to local machine
-* Navigate to root folder using machine's command line or terminal window in VSCode
-* type ```$ npm install``` to install project dependencies
-* type ```$ npm run start``` to start live server and open in browser.
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _navigate to [Sarah Espinet](https://github.com/S-Espinet) -or- [Brenna Lavin](https://github.com/lavinbrenna) -or- [William Jameson](https://github.com/wcjameson) -or- [Jack Jones](https://github.com/JackJones4) -or- [Jessica Baker](https://github.com/jessb-epicodus) in browser_
+* _select repository (fantasy-bestiary)_
+* _click `Code` button and select desired security protocol_
+* _run git clone in terminal into desired directory_
+* _run "npm install" in terminal_
+* _navigate to top level of directory in terminal -or- in your GUI_
+* _type "open index.html" into terminal, -or- double-click the index.html file in your GUI, -or- type "npm run start" terminal_
+* _click cover to open "book"_
+* _click alphabet section to access corresponding monster list_
+* _click monster to see its stats_
+* _click interactive map to use it_
+* _use back buttons to see different entries_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _Cursor changes back to default when using buttons_
 
 ## License
 
 MIT License
 
-Copyright (c) [2022] [Brenna Lavin] [Jack Jones] [Jessi Baker] [Sarah Espinet] [William Jameson]
+Copyright (c) [2022] [Brenna Lavin](https://github.com/lavinbrenna) [Jack Jones](https://github.com/JackJones4) [Jessica Baker](https://github.com/jessb-epicodus) [Sarah Espinet](https://github.com/S-Espinet) [William Jameson](https://github.com/wcjameson)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
