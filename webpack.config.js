@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Fantasy Bestiary',
+      title: 'Monstronomicon',
       template: './src/index.html',
       inject: 'body'
     })

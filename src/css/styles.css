@@ -64,7 +64,7 @@ height: 500px;
   cursor: url('./../assets/images/sword_cursor.png'), default;
 }
 #randomMonsterInfo img {
-  max-width: 30%;
+  max-width: 50%;
 }
 #randomMonsterInfo{
   padding-top: 30px;
